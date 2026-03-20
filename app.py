@@ -88,7 +88,16 @@ def draw_heatmap(x, y, cmap, title):
         s=10,
         alpha=0.5
     )
-
+    # 🔹 ATTACK DIRECTION
+    pitch.arrows(50, 85, 70, 85,
+                 color='#2c3e50', width=1.5,
+                 headwidth=4, headlength=5,
+                 ax=ax, clip_on=False)
+    
+    ax.text(60, 88, 'ATTACK DIRECTION',
+            color='#2c3e50',
+            va='center', ha='center',
+            fontsize=8, fontweight='bold', alpha=0.8)
     ax.set_title(title, fontsize=13)
     return fig
 
